@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wyn Foods Pte Ltd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+  </head>
+  
+  <body>
+    
+    <header>
+      <div class="logo">
+        <img class="img-logo" src="Image/Logo/logo-1.png" alt="wyn foods logo">
+      </div>
+
+      <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FFFFFF"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+          <label for="sidebar-active" class="close-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+          </label>
+
+          <a href="index.html">Home</a>
+          <a href="#">Our Products</a>
+          <a href="#">About Us</a>
+          <a href="#">中文</a>
+        </div>
+      </nav>  
+    </header>
+
+    <main>
+      
+      <!--Landing Page-->
+      <section class="landing-page-section">
+        <div class="landing-page">
+          <img class="img-landing" src="Image/Products/Untitled 3.png" alt="">    
+          <div class="container-text">
+            <h1>Quality You Can <span class="clr-landing">Taste</span>.</h1>
+            <h1>Reliability You Can <span class="clr-landing">Trust</span>.</h1>
+            <h5>Proudly supplying premium cooking oils and creamers for over a decade, trusted by businesses in Singapore and around the world.</h5>
+            <button class="request-quote">Request a Quote</button>                        
+          </div>
+        </div>
+        <div class="scroll-for-more">
+          <h6>Scroll to learn more</h6>
+          <div>&#x2193;</div>
+        </div>
+      </section>
+      
+      <!--Our Brands-->
+      <section class="our-brands">
+        <div class="title-our-brands">
+          <h1>Our Brands</h1>
+          <img src="Image/Logo/bellstar.png" alt="" style="width: 200px;">
+        </div>
+        <div class="scrolling-img">
+          <img class="item item1" src="Image/Logo/mico_gold.png" alt="">
+          <img class="item item2" src="Image/Logo/dyanas.png" alt="">
+          <img class="item item3" src="Image/Logo/sabrina.png" alt="">
+          <img class="item item4" src="Image/Logo/Tradekey.png" alt="">
+        </div>
+        <div class="learn-more">
+          <h6>Learn more</h6>
+          <div>&#8594;</div>
+        </div>
+      </section>
+      
+      <!--About Us-->
+      <section class="about-us">
+        <div class="title-about-us">
+          <h1>About Us</h1>
+        </div>
+        <div class="text-about-us">
+          <div>
+            <img class="img-about-us" src="Image/Office/aboutus-1.png" alt="">
+          </div>
+          <div class="p-about-us">
+            <p>
+              Wyn Foods Pte Ltd is a trusted leader in Singapore’s food industry, incorporated in 2014 with a growing presence across the Maldives, India, the Middle East, Africa, and China.
+            </p>
+            <p>
+              We specialize in premium cooking oils and creamers, and are proud to be one of Singapore’s key suppliers of edible oils. 
+            </p>
+            <p>
+              With HACCP-certified operations and an annual capacity of 1 million metric tonnes, we continue to expand and develop across global markets, delivering quality and reliability to businesses worldwide.
+            </p>
+            <h6 class="learn-more">Learn more &#8594;</h6>
+          </div> 
+        </div>  
+      </section>
+     
+      <!--What We Offer-->
+      <section class="products">
+        <div class="title-products">
+          <h1>What We Offer</h1>
+          <h5 class="subtitle-product">Certified quality, premium ingredients - trusted by businesses across the world</h5>
+        </div>
+        <div class="row-products">
+          <div class="orizontal-box">
+            <img class="img-our-selection" src="Image/Logo/bellstar.png" alt="">
+            <h5>Our Selection</h5>
+          </div>
+          <div class="vertical-boxes">
+            <div class="vertical-box">
+              <img class="icon-boxes" src="Image/Logo/drop.svg" alt="">
+              <h2 class="text-boxes">
+                Pure Vegetable Oil
+              </h2>
+              <p class="text-boxes" style="width: 220px;">
+                Stable, versatile, and heat-resistant 
+                for all your cooking needs.
+              </p>
+              <h6>Discover more</h6>
+            </div>
+            <div class="vertical-box">
+              <img class="icon-boxes" src="Image/Logo/sunflower.svg" alt="">
+              <h2 class="text-boxes">
+                Soft Oil
+              </h2>
+              <p class="text-boxes">
+                Light and healthy – perfect for salads, baking, and daily meals.
+              </p>
+              <h6>Discover more</h6>
+            </div>
+            <div class="vertical-box">
+              <img class="icon-boxes" src="Image/Logo/cream.svg" alt="">
+              <h2 class="text-boxes">
+                Creamer
+              </h2>
+              <p class="text-boxes">
+                Smooth and rich – ideal for beverages and desserts.
+              </p>
+              <h6>Discover more</h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!--Get Your Quote-->
+      <section class="get-a-quote">
+        <div class="title-get-form">
+          <h1>Get Your Quote</h1>
+        </div>
+        <div class="get-a-quote-form">
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h4>
+            Wyn Foods Pte Ltd
+          </h4>
+          <p>
+            5 Upper Aljunied Link #07-06
+            Quartz Industrial Building
+            Singapore 367903
+          </p>
+        </div>
+        <div>
+          <h4>
+            Contact Us
+          </h4>
+          <p>
+            Email: wynfoods@wynfoods.com.sg
+          </p>
+          <p>
+            Phone: +65 62829901
+          </p>
+        </div>
+        <div><!--dont know what to put--></div>
+      </div>
+      <div class="copyright">
+        <p>
+          &#169; 2025 WYN FOODS PTE LTD
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
