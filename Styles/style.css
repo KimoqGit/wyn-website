@@ -96,10 +96,27 @@ p {
   margin-bottom: 40px;
   gap: 5px;
   pointer-events: none;
+  
 }
 
 .scroll-for-more h6{
   font-size: clamp(0.6rem, 1vw, 1rem);
+}
+
+.arrow-scroll {
+  animation: jump 1.5s ease-out infinite;
+  transition: animation 1s;
+  font-size: clamp(0.6rem, 2vw, 1rem);
+}
+
+@keyframes jump {
+  from {
+    transform: translate(0, -1px);
+  }
+
+  to {
+    transform: translate(0, 3px);
+  }
 }
 
 
@@ -125,7 +142,7 @@ p {
 .scrolling-img {
   position: relative;
   height: 50px;
-  width: 400px;
+  width: 350px;
   overflow: hidden;
   mask-image: linear-gradient(
     to left,
@@ -285,6 +302,13 @@ p {
   border-radius: 15px;
   box-shadow: 5px 8px 12px rgba(0,0,0,0.3);
   cursor: pointer;
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+}
+
+.orizontal-box:hover, .vertical-box:hover {
+  transform: scale(1.05);
 }
 
 .orizontal-box h5 {
@@ -339,6 +363,9 @@ p {
   padding-top: 20px;
   margin: 0 12px 0 12px;
   cursor: pointer;
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
 }
 
 .get-a-quote {
