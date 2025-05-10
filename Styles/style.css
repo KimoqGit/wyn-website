@@ -374,14 +374,13 @@ p {
 .get-a-quote {
   padding-left: min(5em, 10%);
   padding-right: min(5em, 10%);
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .title-get-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
   padding-bottom: 30px;
 }
 
@@ -391,7 +390,7 @@ p {
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: #006790;
+  background-color: #FFD254;
   width: 600px;
   height: 450px;
   border: none;
@@ -410,7 +409,6 @@ p {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  padding: 0 2rem;
 }
 
 .get-a-quote-content h2 {

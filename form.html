@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="Styles/header.css">
     <link rel="stylesheet" href="Styles/footer.css">
     <link rel="stylesheet" href="Styles/form.css">
+    <link rel="stylesheet" href="Styles/general.css">
   </head>
   
   <body>
@@ -43,14 +44,56 @@
     </header>
 
     <main>
-      <div class="container-form">
-        <form action="">
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Comapany">
-          <input type="text" placeholder="Country">
+      <div class="form-container">
+        <form action="#" method="POST">
+          <div class="name-details">
+            <div>
+              <label for="name"></label>
+              <input class="input-text" type="text" id="name" placeholder="Name">
+            </div>
+            <div>
+              <input class="input-text" type="text" id="company" placeholder="Company"> 
+            </div>        
+          </div>
+          
+          <div>
+            <input class="input-text" type="email" id="email" placeholder="Email">
+          </div>
+          <div>
+            <input class="input-text" type="text" name="country" id="country" placeholder="Country">
+          </div>
+          
+          <label for="product-type">Products interested in: </label>
+          <div class="product-choice">
+          <input type="radio" name="product-type" id="cooking-oil">
+          <label for="cooking-oil">Cooking Oil</label>
+          <input type="radio" name="product-type" id="creamer">
+          <label for="creamer">Creamer</label>
+          <input type="radio" name="product-type" id="both-type">
+          <label for="both-type">Both</label>
+          </div>
+
+          <label for="product-type">Estimated order quantity: </label>
+          <div class="product-choice">
+          <input type="radio" name="quantity" id="lt100">
+          <label for="lt100">&lt;100L</label>
+          <input type="radio" name="quantity" id="100to500">
+          <label for="100to500">100–500L</label>
+          <input type="radio" name="quantity" id="gt500">
+          <label for="gt500">&gt;500L</label>
+          </div>
+          <div>
+            <textarea class="input-text" name="" id="" placeholder="Leave us a message"></textarea>
+          </div>
+
+          <div>
+            <input type="submit">
+          </div>
+          
         </form>
       </div>
+      
+        
     </main>
     
     <footer>
