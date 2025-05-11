@@ -1,0 +1,4 @@
+sendmail.php
+*.json
+*.lock
+vendor/

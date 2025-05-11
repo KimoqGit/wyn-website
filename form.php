@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,61 +48,80 @@
     <main>
       <h1 class="title-form">Get a Quote</h1>
       <div class="form-container">
-        <form action="#" method="POST">
+        <form action="sendmail.php" method="POST">
           <div class="name-details">
             <div>
               <label for="name"></label>
-              <input class="input-text" type="text" id="name" placeholder="Name">
+              <input required class="input-text" type="text" id="name" name="name" placeholder="Name">
             </div>
             <div>
-              <input class="input-text" type="text" id="company" placeholder="Company"> 
+              <input class="input-text" type="text" name="company" id="company" placeholder="Company"> 
             </div>        
           </div>
           
-          <div>
-            <input class="input-text" type="email" id="email" placeholder="Email">
+          <div class="name-details">
+            <div>
+              <input required class="input-text" type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div>
+              <input class="input-text" type="tel" name="phone-number" id="phone-number" placeholder="Phone Number">
+            </div>
           </div>
+
           <div>
-            <input class="input-text" type="text" name="country" id="country" placeholder="Country">
+            <input required class="input-text" type="text" name="country" id="country" placeholder="Country">
           </div>
           
           <label class="label-title" for="product-type">Interested in: </label>
           <div class="product-choice">
             <div>
-              <input type="radio" name="product-type" id="cooking-oil">
+              <input type="radio" name="product-type" id="cooking-oil" value="Cooking Oil">
               <label class="label-group" for="cooking-oil">Cooking Oil</label>
             </div>
             <div>
-              <input type="radio" name="product-type" id="creamer">
+              <input type="radio" name="product-type" id="creamer" value="Creamer">
               <label class="label-group" for="creamer">Creamer</label>
             </div>
             <div>
-              <input type="radio" name="product-type" id="both-type">
+              <input type="radio" name="product-type" id="both-type" value="Cooking Oil and Creamer">
               <label class="label-group" for="both-type">Both</label>
             </div>
           </div>
 
-          <label class="label-title" for="product-type">Order quantity: </label>
+          <label class="label-title" for="quantity">Order quantity: </label>
           <div class="product-choice">
             <div>
-              <input type="radio" name="quantity" id="lt100">
+              <input type="radio" name="quantity" id="lt100" value="Less than 100L">
               <label class="label-group" for="lt100">&lt;100L</label>
             </div>
             <div>
-              <input type="radio" name="quantity" id="100to500">
+              <input type="radio" name="quantity" id="100to500" value="Between 100 and 500 L">
               <label class="label-group" for="100to500">100–500L</label>
             </div>
             <div>
-              <input type="radio" name="quantity" id="gt500">
+              <input type="radio" name="quantity" id="gt500" value="More than 500L">
               <label class="label-group" for="gt500">&gt;500L</label>
             </div>
           </div>
+
+          <label class="label-title" for="answer-type">How would you like to be contacted? </label>
+          <div class="product-choice">
+            <div>
+              <input type="radio" name="answer-type" id="email-choice" value="Email">
+              <label class="label-group" for="email-choice">Email</label>
+            </div>
+            <div>
+              <input type="radio" name="answer-type" id="phone-choice" value="Call">
+              <label class="label-group" for="phone-choice">Call</label>
+            </div>
+          </div>
+
           <div>
-            <textarea name="" id="message-box" placeholder="Leave us a message"></textarea>
+            <textarea name="message" id="message-box" placeholder="Leave us a message"></textarea>
           </div>
 
           <div class="submit-container">
-            <input type="submit" id="submit-button">
+            <input type="submit" name="submitContact" id="submit-button">
           </div>
           
         </form>

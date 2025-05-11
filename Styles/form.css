@@ -47,30 +47,18 @@ label {
 }
 
 @media (max-width: 580px) {
-  .form-container {
-    flex-direction: column;
-  }
-
-  .name-details {
-    flex-direction: column;
-  }
-
-  .product-choice {
+  .form-container, .name-details, .product-choice {
     flex-direction: column;
   }
 
   .input-text, #message-box {
     max-width: 350px;
   }
-  
-  .name-details {
-    gap: 0;
-  }
 }
 
 .name-details {
   display: flex;
-  gap: 10px;
+  gap: 0px 10px;
 }
 
 .product-choice {
