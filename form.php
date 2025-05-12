@@ -55,7 +55,7 @@
               <input required class="input-text" type="text" id="name" name="name" placeholder="Name">
             </div>
             <div>
-              <input class="input-text" type="text" name="company" id="company" placeholder="Company"> 
+              <input class="input-text" type="text" name="company" id="company" placeholder="Company (optional)"> 
             </div>        
           </div>
           
@@ -64,26 +64,26 @@
               <input required class="input-text" type="email" name="email" id="email" placeholder="Email">
             </div>
             <div>
-              <input class="input-text" type="tel" name="phone-number" id="phone-number" placeholder="Phone Number">
+              <input class="input-text" type="tel" name="phone-number" id="phone-number" placeholder="Phone Number (optional)" inputmode="numeric" pattern="[0-9]*" minlength="5">
             </div>
           </div>
 
           <div>
-            <input required class="input-text" type="text" name="country" id="country" placeholder="Country">
+            <input class="input-text" type="text" name="country" id="country" placeholder="Country" required>
           </div>
           
           <label class="label-title" for="product-type">Interested in: </label>
           <div class="product-choice">
             <div>
-              <input type="radio" name="product-type" id="cooking-oil" value="Cooking Oil">
+              <input type="radio" name="product-type" id="cooking-oil" value="Cooking Oil" required checked>
               <label class="label-group" for="cooking-oil">Cooking Oil</label>
             </div>
             <div>
-              <input type="radio" name="product-type" id="creamer" value="Creamer">
+              <input type="radio" name="product-type" id="creamer" value="Creamer" required>
               <label class="label-group" for="creamer">Creamer</label>
             </div>
             <div>
-              <input type="radio" name="product-type" id="both-type" value="Cooking Oil and Creamer">
+              <input type="radio" name="product-type" id="both-type" value="Cooking Oil and Creamer" required>
               <label class="label-group" for="both-type">Both</label>
             </div>
           </div>
@@ -91,29 +91,36 @@
           <label class="label-title" for="quantity">Order quantity: </label>
           <div class="product-choice">
             <div>
-              <input type="radio" name="quantity" id="lt100" value="Less than 100L">
+              <input type="radio" name="quantity" id="lt100" value="Less than 100L" required checked>
               <label class="label-group" for="lt100">&lt;100L</label>
             </div>
             <div>
-              <input type="radio" name="quantity" id="100to500" value="Between 100 and 500 L">
+              <input type="radio" name="quantity" id="100to500" value="Between 100 and 500 L" required>
               <label class="label-group" for="100to500">100–500L</label>
             </div>
             <div>
-              <input type="radio" name="quantity" id="gt500" value="More than 500L">
+              <input type="radio" name="quantity" id="gt500" value="More than 500L" required>
               <label class="label-group" for="gt500">&gt;500L</label>
             </div>
           </div>
 
-          <label class="label-title" for="answer-type">How would you like to be contacted? </label>
-          <div class="product-choice">
-            <div>
-              <input type="radio" name="answer-type" id="email-choice" value="Email">
-              <label class="label-group" for="email-choice">Email</label>
+          <div id="method-to-contact" style="display: none;">
+            <label class="label-title" for="answer-type">How would you like to be contacted? </label>
+            <div class="product-choice">
+              <div>
+                <input type="radio" name="answer-type" id="email-choice" value="Email" onclick="showTimeField()" checked>
+                <label class="label-group" for="email-choice">Email</label>
+              </div>
+              <div>
+                <input type="radio" name="answer-type" id="phone-choice" value="Call" onclick="showTimeField()">
+                <label class="label-group" for="phone-choice">Call</label>
+              </div>
             </div>
-            <div>
-              <input type="radio" name="answer-type" id="phone-choice" value="Call">
-              <label class="label-group" for="phone-choice">Call</label>
-            </div>
+          </div>
+
+          <div id="call-time-field" style="display: none;">
+            <label class="label-title" for="time">Best time to call (based on your timezone): </label>
+            <input class="input-text" id="time" name="time" type="time" placeholder="Best time to call">
           </div>
 
           <div>
@@ -199,5 +206,38 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      // Show the time preferred to call if "Call" is selected 
+      function showTimeField() {
+        const selected = document.querySelector('input[name="answer-type"]:checked');
+        const extra = document.getElementById("call-time-field");
+
+        if (selected && selected.value === "Call") {
+          extra.style.display = "block";
+        } else {
+          extra.style.display = "none";
+        }
+          
+      }
+
+      // Check the input of the "Phone Number field", if empty don't show "email or call", else show it
+      const phoneInput = document.getElementById("phone-number");
+      const methodContact = document.getElementById("method-to-contact");
+      const extra = document.getElementById("call-time-field");
+
+      phoneInput.addEventListener("input", function () {
+        if (phoneInput.value.trim() !== "") {
+          methodContact.style.display = "block";
+        } else {
+          methodContact.style.display = "none";
+          extra.style.display = "none";
+        }
+      });
+
+
+
+
+    </script>
   </body>
 </html>
