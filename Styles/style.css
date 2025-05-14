@@ -410,10 +410,11 @@ p {
   text-align: center;
   align-items: center;
   gap: 30px 0;
+  padding: 0 30px;
 }
 
 .get-a-quote-content h2 {
-  color: #f5f5f5;
+  color: #006790;
   font-size: clamp(2rem, 3rem, 5rem);
 }
 
