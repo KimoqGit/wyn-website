@@ -17,7 +17,7 @@ h2 {
   align-items: center;
   gap: 0 10px;
   font-size: 2em;
-  margin: 50px 0;
+  margin: 100px 0;
 }
 .landing-section h2:before, .landing-section h2:after {
   content: "";
@@ -96,7 +96,7 @@ h2 {
   background-color: #003B57;
   color: white;
   margin-top: 120px;
-  padding: 50px min(3em, 10%);
+  padding: 120px min(4em, 10%);
 }
 
 .container-flagship {
@@ -126,11 +126,12 @@ h2 {
 
 /*Pure Oil Section */
 
-.pureoil-section {
+.info-products-section {
   margin-top: 50px;
 }
 .title-products-section {
   text-align: center;
+  padding-top: 30px;
 }
 .title-products-section h2 {
   margin: 0;
@@ -139,20 +140,45 @@ h2 {
 .main-products-section {
   display: flex;
   align-items: center;
-  padding: 50px min(3em, 10%);
+  padding: 70px min(3em, 10%);
 }
 
 .description-prod-section {
   text-align: center;
   flex: 1;
+  padding: 0 2rem;
+  line-height: 20px;
 }
-.description-prod-section img{
+.pureoil-img{
   width: 350px;
 }
+.creamer-img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+}
 
+.request-quote, .browse-products {
+  border: none;
+  background-color: #FFD254;
+  padding: 10px 30px;
+  border-radius: 7px;
+  font-family: Outfit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.browse-products {
+  background-color: #006790;
+  color: white;
+  margin-left: 20px;
+}
+.softoil-variant-button {
+  background-color: #333333;
+  color: #FFD254;
+}
 .boxes-container {
   flex: 1;
-  width: 50%;
 }
 
 .upperbox {
@@ -167,37 +193,132 @@ h2 {
 
   margin-bottom: 10px;
   padding: 10px 30px;
+
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.25);
 }
 
-.img-cert {
-  height: 50px; 
-  width: 50px;
-  object-fit: contain;
+.lower-boxes {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  gap: 10px;
 }
+.lower-boxes h2 {
+  margin: 5px 0;
+  font-size: clamp(0.7em, 1.2em, 3em);
+}
+.lower-boxes h5 {
+  margin: 5px 0 0 0;
+}
+
 
 .cert-box {
   background-color: #FFD254;
+  display: grid;
   text-align: center;
-  justify-content: center;
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 10px 10px 40px 10px;
   flex: 1;
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.25);
+}
+.softoil-cert-variant {
+  border: 4px solid #003B57;
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.25);
 }
 
 .cert-img-box {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-.lower-boxes {
-  display: flex;
-  justify-content: center;
+.img-cert {
+  height: 60px; 
+  width: 60px;
+  object-fit: contain;
 }
+
+
 
 .ideal-box {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  flex: 2;
+  background-color: #003B57;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 10px 20px 10px;
+}
+
+.ideal-content {
+  display: flex;
+  gap: 10px;
+}
+
+.icons-ideal-box {
+  flex: 1;
+}
+
+.softoil-section {
+  background-color: #FFD254;
+}
+
+.softoil-img {
+  width: 280px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.title-products-section h4 {
+  margin: 8px 0 0 0;
+  font-weight: 500;
+}
+
+
+.selection-section {
+  background-color: #003B57;
+  color: white;
+  margin-top: 50px;
+  padding-top: 10px;
+}
+.selection-section h2 {
+  text-align: center;
+  font-size: clamp(1em, 3em, 3em);
+  color: #FFD254;
+}
+.grid-our-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 50px min(3em, 10%);
+}
+
+.container-products {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 2px 3px 12px rgba(0,0,0,0.25);
+
+}
+.product-img {
+  height: 150px;
+}
+.container-img {
+  border-right: 3px solid #003B57;
+}
+
+.text-logo-products {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  color: #333333;
+
+  padding-left: 10px;
+}
+.text-logo-products img{
+  width: 120px;
 }
