@@ -1,0 +1,203 @@
+main {
+  padding-top: 120px;
+}
+
+h2 {
+  font-size: clamp(1rem, 2rem, 3rem);
+} 
+
+/* Landing section */
+
+.landing-section {
+  text-align: center;
+}
+
+.landing-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  font-size: 2em;
+  margin: 50px 0;
+}
+.landing-section h2:before, .landing-section h2:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid black;
+}
+
+/* Overview */
+
+.grid-overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-self: center;
+  gap: 35px;
+}
+
+.overview-box {
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.item1 {
+  background-color: #003B57;
+  
+}
+.item1 img {
+  width: 100px;
+}
+.item1 h5 {
+  position: absolute;
+  bottom: -60px;
+  left: 7px;
+  font-size: 1em;
+}
+.item2 h5 {
+  position: absolute;
+  bottom: -70px;
+  font-size: 0.9em;
+}
+.item3 h5 {
+  position: absolute;
+  bottom: -60px;
+  font-size: 1em;
+}
+.item4 h5 {
+  position: absolute;
+  bottom: -60px;
+  font-size: 1em;
+}
+.item5 h5 {
+  position: absolute;
+  bottom: -60px;
+  font-size: 1em;
+}
+.item2 {
+  background-color: #FFD254;
+}
+.item3 {
+  background-color: #FFD254;
+}
+.item4 {
+  background-color: #FFD254;
+}
+.item5 {
+  background-color: #003B57;
+}
+
+/*Brands Section */
+
+.brands-section {
+  background-color: #003B57;
+  color: white;
+  margin-top: 120px;
+  padding: 50px min(3em, 10%);
+}
+
+.container-flagship {
+  display: flex;
+}
+.container-flagship img {
+  width: 50%;
+}
+
+.title-partner {
+  text-align: center;
+}
+
+.grid-partner-brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  justify-self: center;
+  align-self: start;
+  gap: 1em;  
+}
+
+.grid-partner-brands img {
+  height: 50px;
+  object-fit: contain;
+}
+
+/*Pure Oil Section */
+
+.pureoil-section {
+  margin-top: 50px;
+}
+.title-products-section {
+  text-align: center;
+}
+.title-products-section h2 {
+  margin: 0;
+}
+
+.main-products-section {
+  display: flex;
+  align-items: center;
+  padding: 50px min(3em, 10%);
+}
+
+.description-prod-section {
+  text-align: center;
+  flex: 1;
+}
+.description-prod-section img{
+  width: 350px;
+}
+
+.boxes-container {
+  flex: 1;
+  width: 50%;
+}
+
+.upperbox {
+  background-color: #003B57;
+  border-radius: 10px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+
+  margin-bottom: 10px;
+  padding: 10px 30px;
+}
+
+.img-cert {
+  height: 50px; 
+  width: 50px;
+  object-fit: contain;
+}
+
+.cert-box {
+  background-color: #FFD254;
+  text-align: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 10px 10px;
+  flex: 1;
+}
+
+.cert-img-box {
+  display: flex;
+  justify-content: center;
+}
+
+.lower-boxes {
+  display: flex;
+  justify-content: center;
+}
+
+.ideal-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 2;
+}
