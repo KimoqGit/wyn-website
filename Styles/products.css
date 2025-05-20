@@ -18,7 +18,7 @@ h2 {
 }
 .landing-section h1 {
   color: #003B57;
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3.5rem, 6.5vw, 7rem);
 }
 .landing-section h4 {
   font-size: clamp(1rem, 1.4vw, 3rem);
@@ -76,31 +76,13 @@ h2 {
 .item1 img {
   width: 100px;
 }
-.item1 h5 {
+.item1 h5, .item2 h5, .item3 h5, .item4 h5, .item5 h5 {
   position: absolute;
-  bottom: -60px;
-  font-size: 1em;
+  white-space: nowrap;
+  bottom: -9vh;
+  font-size: clamp(1rem, 1.2vw, 2rem);
 }
-.item2 h5 {
-  position: absolute;
-  bottom: -70px;
-  font-size: 0.9em;
-}
-.item3 h5 {
-  position: absolute;
-  bottom: -60px;
-  font-size: 1em;
-}
-.item4 h5 {
-  position: absolute;
-  bottom: -60px;
-  font-size: 1em;
-}
-.item5 h5 {
-  position: absolute;
-  bottom: -60px;
-  font-size: 1em;
-}
+
 .item2 {
   background-color: #FFD254;
 }
