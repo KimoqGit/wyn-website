@@ -6,10 +6,23 @@ h2 {
   font-size: clamp(1rem, 2rem, 3rem);
 } 
 
+.break-line {
+  display: block;
+}
+
 /* Landing section */
 
 .landing-section {
   text-align: center;
+  padding-bottom: min(100px, 10%);
+}
+.landing-section h1 {
+  color: #003B57;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+}
+.landing-section h4 {
+  font-size: clamp(1rem, 1.4vw, 3rem);
+  padding: 0 min(5em, 5%);
 }
 
 .landing-section h2 {
@@ -18,25 +31,37 @@ h2 {
   gap: 0 10px;
   font-size: 2em;
   margin: 100px 0;
+  color: #003B57;
 }
 .landing-section h2:before, .landing-section h2:after {
   content: "";
   flex: 1 1;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #FFD254;
 }
 
 /* Overview */
 
 .grid-overview {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  justify-self: center;
-  gap: 35px;
+  display: flex;
+  justify-items: center;
+  gap: 20px;
+  padding: 0 min(3rem, 10%);
+}
+
+@media (max-width: 690px) {
+  .grid-overview {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+  .overview-box {
+    width: clamp(200px, 80%, 300px);
+  }
 }
 
 .overview-box {
   height: 100px;
-  width: 100px;
+  width: clamp(200px, 80%, 300px);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -54,7 +79,6 @@ h2 {
 .item1 h5 {
   position: absolute;
   bottom: -60px;
-  left: 7px;
   font-size: 1em;
 }
 .item2 h5 {
@@ -98,16 +122,37 @@ h2 {
   margin-top: 120px;
   padding: 120px min(4em, 10%);
 }
+.brands-section h2 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  white-space: nowrap;
+}
+.brands-section h5 {
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.3vw, 2.2rem);
+  line-height: 1.5em;
+}
 
 .container-flagship {
   display: flex;
-}
-.container-flagship img {
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+  padding: 0 50px;
 }
 
+.container-flagship img {
+  width: 200px;
+  object-fit: contain;
+  flex: 1;
+}
+
+.text-flagship {
+  flex: 1;
+}
 .title-partner {
   text-align: center;
+  margin-bottom: 5vw;
 }
 
 .grid-partner-brands {
@@ -116,11 +161,22 @@ h2 {
   text-align: center;
   justify-self: center;
   align-self: start;
-  gap: 1em;  
+  gap: 2em;  
+  text-align: center;
+}
+@media (max-width: 870px) {
+  .grid-partner-brands {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 490px) {
+  .grid-partner-brands {
+    grid-template-columns: 1fr;
+  }
 }
 
 .grid-partner-brands img {
-  height: 50px;
+  height: 70px;
   object-fit: contain;
 }
 
@@ -135,22 +191,42 @@ h2 {
 }
 .title-products-section h2 {
   margin: 0;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
 }
 
 .main-products-section {
-  display: flex;
-  align-items: center;
-  padding: 70px min(3em, 10%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text boxes";
+  padding: 70px min(2em, 10%);
+}
+
+@media (max-width: 940px) {
+  .main-products-section {
+    grid-template-areas: 
+      "boxes" 
+      "text";
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .description-prod-section {
+    padding: 0;
+  }
 }
 
 .description-prod-section {
+  grid-area: text;
   text-align: center;
-  flex: 1;
   padding: 0 2rem;
   line-height: 20px;
 }
+.description-prod-section h5 {
+  font-size: clamp(0.8rem, 1vw, 1.8rem);
+}
 .pureoil-img{
-  width: 350px;
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
 }
 .creamer-img {
   width: 250px;
@@ -158,9 +234,21 @@ h2 {
   object-fit: cover;
 }
 
+.buttons-prod-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (max-width: 490px) {
+  .buttons-prod-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .request-quote, .browse-products {
   border: none;
   background-color: #FFD254;
+  color: #333333;
   padding: 10px 30px;
   border-radius: 7px;
   font-family: Outfit;
@@ -171,14 +259,16 @@ h2 {
 .browse-products {
   background-color: #006790;
   color: white;
-  margin-left: 20px;
 }
 .softoil-variant-button {
   background-color: #333333;
   color: #FFD254;
 }
 .boxes-container {
-  flex: 1;
+  grid-area: boxes;
+}
+.boxes-container h5 {
+  font-size: clamp(0.8rem, 1.2vw, 3rem);
 }
 
 .upperbox {
@@ -197,6 +287,7 @@ h2 {
   box-shadow: 2px 3px 12px rgba(0,0,0,0.25);
 }
 
+
 .lower-boxes {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -205,7 +296,7 @@ h2 {
 }
 .lower-boxes h2 {
   margin: 5px 0;
-  font-size: clamp(0.7em, 1.2em, 3em);
+  font-size: clamp(1rem, 2vw, 3rem);
 }
 .lower-boxes h5 {
   margin: 5px 0 0 0;
@@ -266,8 +357,8 @@ h2 {
 }
 
 .softoil-img {
-  width: 280px;
-  height: 230px;
+  width: 250px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -295,6 +386,17 @@ h2 {
   padding: 50px min(3em, 10%);
 }
 
+@media (max-width: 835px) {
+  .grid-our-selection {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 590px) {
+  .grid-our-selection {
+    grid-template-columns: 1fr;
+  }
+}
+
 .container-products {
   display: flex;
   align-items: center;
@@ -308,7 +410,7 @@ h2 {
   height: 150px;
 }
 .container-img {
-  border-right: 3px solid #003B57;
+  border-right: 3px solid #006790;
 }
 
 .text-logo-products {
@@ -320,5 +422,8 @@ h2 {
   padding-left: 10px;
 }
 .text-logo-products img{
-  width: 120px;
+  max-width: 120px;
+}
+.text-logo-products h4 {
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
